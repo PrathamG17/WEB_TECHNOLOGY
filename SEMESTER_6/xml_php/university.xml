@@ -1,0 +1,13 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<root>
+	<uni>
+		<name>SPPU</name>
+		<city>PUNE</city>
+		<rank>1</rank>
+	</uni>
+	<uni>
+		<name>DPU</name>
+		<city>PCMC</city>
+		<rank>2</rank>
+	</uni>
+</root>

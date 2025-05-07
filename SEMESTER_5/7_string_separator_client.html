@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type = "text/css">
+			body
+			{
+				background : red;
+			}
+			
+			form
+			{
+				background : orange;
+			}
+		
+			form fieldset
+			{
+				background : yellow;
+				text-align : center;
+				font-size : 15pt;
+				font-family : bold;
+			}
+			
+			h1
+			{
+				text-align : center;
+				text-transform : uppercase;
+				font-size : 30pt;
+				font : bold;
+				color : black;
+				background : green;
+			}
+			
+			input
+			{
+				font-family : bold;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<fieldset>
+			<h1>string operation</h1>
+		</fieldset>
+		<fieldset>
+			<form action = "7_server.php" method = "post">
+				<fieldset>
+					<legend><b>[FILLINGS]</b></legend>
+					<label>Enter String :- </label>
+					<input type = "text" name = "str" placeholder = "alphnumeric combination">
+					<br><br>
+					
+					<label>Choose the Separator :-</label>
+					<select name = "separator">
+						<option value = " ">[select]</option>
+						<option value = "#">#</option>
+						<option value = "%">%</option>
+						<option value = ",">,</option>
+						<option value = "!">!</option>
+					</select>
+				</fieldset>
+				<br><br>
+				
+				<fieldset>
+					<legend><b>[OPTIONS]</b></legend>
+					<input type = "radio" name = "choice" value = "1">Separate String
+					<br>
+
+					<input type = "radio" name = "choice" value = "2">Replace Separateer
+					<select name = "separator1">
+						<option value = " ">[select]</option>
+						<option value = "#">#</option>
+						<option value = "%">%</option>
+						<option value = ",">,</option>
+						<option value = "!">!</option>
+					</select>
+					<br>
+
+					<input type = "radio" name = "choice" value = "3">Get Last Word Of String
+				</fieldset>
+				<br><br>
+				
+				<fieldset>	
+					<legend><b>[FINAL SECTION]</b></legend>
+					<input type = "submit" value = "Submit">					
+					<input type = "reset" value = "cancel">
+				</fieldset>
+				<br><br>
+			</form>
+		</fieldset>
+	</body>
+</html>
+

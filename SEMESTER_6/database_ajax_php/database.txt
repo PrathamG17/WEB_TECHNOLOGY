@@ -1,0 +1,143 @@
+──(root㉿kali)-[~/Desktop]
+└─# service postgresql start
+                                                                                                                                                           
+┌──(root㉿kali)-[~/Desktop]
+└─# su postgres       
+postgres@kali:/root/Desktop$ cd /
+postgres@kali:/$ psql
+psql (16.1 (Debian 16.1-1))
+Type "help" for help.
+
+postgres=# \du
+                             List of roles
+ Role name |                         Attributes                         
+-----------+------------------------------------------------------------
+ postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS
+
+postgres=# \l
+                                                     List of databases
+     Name     |  Owner   | Encoding | Locale Provider | Collate |  Ctype  | ICU Locale | ICU Rules |   Access privileges   
+--------------+----------+----------+-----------------+---------+---------+------------+-----------+-----------------------
+ Event        | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ bhakti108    | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ e1           | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ event        | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ h1           | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ mehboob51865 | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ postgres     | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ rahul27      | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ s1           | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ siddhi55     | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ stud_com     | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ sycds50      | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ sycds_50     | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ t1           | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ template0    | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | =c/postgres          +
+              |          |          |                 |         |         |            |           | postgres=CTc/postgres
+ template1    | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | =c/postgres          +
+              |          |          |                 |         |         |            |           | postgres=CTc/postgres
+ ty           | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ ty040        | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | =Tc/postgres         +
+              |          |          |                 |         |         |            |           | postgres=CTc/postgres
+ vaishnavi    | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ vaishnavi127 | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+(20 rows)
+
+postgres=# create database College;
+CREATE DATABASE
+postgres=# \c College
+connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  database "College" does not exist
+Previous connection kept
+postgres=# \q
+postgres@kali:/$ psql -U postgres -d College
+psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  database "College" does not exist
+postgres@kali:/$ psql -U postgres -d College;
+psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  database "College" does not exist
+postgres@kali:/$ psql
+psql (16.1 (Debian 16.1-1))
+Type "help" for help.
+
+postgres=# \l
+                                                     List of databases
+     Name     |  Owner   | Encoding | Locale Provider | Collate |  Ctype  | ICU Locale | ICU Rules |   Access privileges   
+--------------+----------+----------+-----------------+---------+---------+------------+-----------+-----------------------
+ Event        | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ bhakti108    | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ college      | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ e1           | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ event        | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ h1           | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ mehboob51865 | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ postgres     | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ rahul27      | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ s1           | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ siddhi55     | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ stud_com     | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ sycds50      | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ sycds_50     | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ t1           | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ template0    | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | =c/postgres          +
+              |          |          |                 |         |         |            |           | postgres=CTc/postgres
+ template1    | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | =c/postgres          +
+              |          |          |                 |         |         |            |           | postgres=CTc/postgres
+ ty           | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ ty040        | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | =Tc/postgres         +
+              |          |          |                 |         |         |            |           | postgres=CTc/postgres
+ vaishnavi    | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+ vaishnavi127 | postgres | UTF8     | libc            | C.UTF-8 | C.UTF-8 |            |           | 
+(21 rows)
+
+postgres=# \q
+postgres@kali:/$ psql -U postgres -d college
+psql (16.1 (Debian 16.1-1))
+Type "help" for help.
+
+college=# ALTER USER postgres WITH PASSWORD '123';
+ALTER ROLE
+college=# clear
+college-# \q
+postgres@kali:/$ psql -U postgres -d college
+psql (16.1 (Debian 16.1-1))
+Type "help" for help.
+
+college=# create table teacher(no integer auto_increment primary key, name varchar(30) not null, subject varchar(30) not null, research_area varchar(40)not null);
+ERROR:  syntax error at or near "auto_increment"
+LINE 1: create table teacher(no integer auto_increment primary key, ...
+                                        ^
+college=# create table teacher(no int not null AUTO_INCREMENT, name varchar(30) not null, subject varchar(30) not null, research_area varchar(40)not null PRIMARY KEY (no));
+ERROR:  syntax error at or near "AUTO_INCREMENT"
+LINE 1: create table teacher(no int not null AUTO_INCREMENT, name va...
+                                             ^
+college=# create table teacher(no SERIAL PRIMARY KEY, name varchar(30) not null, subject varchar(30) not null, research_area varchar(40) not null);CREATE TABLE
+college=# insert into teacher values ('Poonam Ponde', 'Java', 'Multithreading');
+ERROR:  invalid input syntax for type integer: "Poonam Ponde"
+LINE 1: insert into teacher values ('Poonam Ponde', 'Java', 'Multith...
+                                    ^
+college=# insert into teacher (name, subject, research_area) values ('Poonam Ponde', 'Java', 'Multithreading');
+INSERT 0 1
+college=# select * from teacher;
+ no |     name     | subject | research_area  
+----+--------------+---------+----------------
+  1 | Poonam Ponde | Java    | Multithreading
+(1 row)
+
+college=# insert into teacher (name, subject, research_area) values ('Seema Jawale', 'TCS', 'Minimization Of F.A.');
+INSERT 0 1
+college=# insert into teacher (name, subject, research_area) values ('Jayshri Patil', 'Java', '2D Graphics');
+INSERT 0 1
+college=# insert into teacher (name, subject, research_area) values ('Kalpana Joshi', 'O.S.', 'Realtime O.S.');
+INSERT 0 1
+college=# insert into teacher (name, subject, research_area) values ('Ranjana Shevkar', 'B.A.', 'Inventory');
+INSERT 0 1
+college=# select * from teacher;
+ no |      name       | subject |    research_area     
+----+-----------------+---------+----------------------
+  1 | Poonam Ponde    | Java    | Multithreading
+  2 | Seema Jawale    | TCS     | Minimization Of F.A.
+  3 | Jayshri Patil   | Java    | 2D Graphics
+  4 | Kalpana Joshi   | O.S.    | Realtime O.S.
+  5 | Ranjana Shevkar | B.A.    | Inventory
+(5 rows)
+
+college=# \q
+postgres@kali:/$ 

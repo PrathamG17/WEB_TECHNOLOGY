@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script language = "javascript" type = "text/javascript">
+	function validate()
+	{
+		var name = document.getElementById("name").value;
+		var no = document.getElementById("no").value;
+		var addr = document.getElementById("addr").value;
+		
+		if(name.length > 1)
+		{
+			if(!isNAN(no) && (no.length == 10))
+			{
+				var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+				
+				if(pattern.test(addr))
+				{
+					confitm("SUCCESSFUL CREDENTIALS 🥳️");
+				}
+				else
+				{
+					alert("PLEASE ENTER VALID EMAIL ADDRESS 😵️");				
+				}
+			}
+			else
+			{
+				alert("PLEASE ENTER VALID NUMBER 🔴️");
+			}
+		}
+		else
+		{
+			alert("PLEASE ENTER VALID USER NAME ☠️");
+		}
+	}
+	</script>
+</head>
+<body>
+	<form>
+		Enter User Name : <input type = "text" id = "name">
+		<br/><br/>
+
+		Enter Number : <input type = "text" id = "no">
+		<br/><br/>
+
+		Enter Gmail Address : <input type = "text" id = "addr">
+		<br/><br/>
+
+		<button onclick = "validate()">Submit</button>
+		<br/><br/>
+	</form>
+</body>
+</html>

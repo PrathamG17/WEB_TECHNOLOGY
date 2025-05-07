@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type = "text/javascript">
+			function validateForm()
+			{
+				var username = document.getElementById("name").value;
+
+				var password = document.getElementById("pass").value;
+				
+				if(username == "")
+				{
+					alert("Username Must Be Filled Out");
+					return false;
+				}
+
+				if(password == "")
+				{
+					alert("Password Must Be Filled Out");
+					return false;
+				}
+
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<form onsubmit = "validateForm()">
+		Enter UserName :
+		<input type = "text" name = "username" id = "name"/>
+
+		Enter Password :
+		<input type = "text" name = "password" id = "pass"/>
+
+		<input type = "submit" value = "Submit"/>
+		<br/><br/>				
+		</form>
+	</body>
+</html>
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type = "text/javascript">
+			function show()
+			{
+				xhr = new XMLHttpRequest();
+				
+				var name = document.getElementById("name").value;
+				var age = document.getElementById("age").value;
+				var nationality = document.getElementById("nationality").value;
+				
+				xhr.open("GET", "slip27_voter.php?q=" + name +"&r=" + age + "&s=" + nationality, true);
+				xhr.send();
+				
+				xhr.onreadystatechange = function()
+				{
+					if(xhr.readyState == 4 && xhr.status == 200)
+					{
+						document.getElementById("output").innerHTML = xhr.responseText;
+					}
+				}
+				return false;
+			}
+		</script>
+	</head>
+	<body>
+		<form onsubmit = "return show()" >
+			<center>
+				Enter Name : <input type = "text" id = "name"><br/><br/>
+				Enter Age : <input type = "text" id = "age"><br/><br/>
+				Enter Nationality : <input type = "text" id = "nationality"><br/><br/>
+				
+				<input type = "submit" value = "SUBMIT">
+				
+				<div id = "output"></div> 
+			</center>
+		</form>
+	</body>
+</html>

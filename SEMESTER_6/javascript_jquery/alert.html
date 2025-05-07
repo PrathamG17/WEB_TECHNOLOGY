@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1 id = "ch">Welcome</h1>
+		
+		<button onclick = "promptfunction()">Prompt</button>
+		<br/><br/>
+		
+		<button onclick = "confirmfunction()">Confirm</button>
+		<br/><br/>
+		
+		<button onclick = "alertfunction()">Alert</button>
+		<br/><br/>
+		
+		<script type = "text/javascript">
+			function promptfunction()
+			{
+				var temp = prompt('Exam is near, have you started preparing for it? Yes or No', 'No')
+				
+				if(temp == 'No')
+					document.getElementById('ch').textContent = 'Start Preparing For Exam'
+				else
+					document.getElementById('ch').textContent = 'Best Of Luck'
+			}
+
+			function confirmfunction()
+			{
+				var temp = confirm('Exam is near, have you started preparing for it?')
+				
+				if(temp == false)
+					document.getElementById('ch').innerHTML = 'Start Preparing For Exam'
+				else
+					document.getElementById('ch').innerHTML = 'Best Of Luck'
+			}
+
+			function alertfunction()
+			{
+				alert('Exam is near, have you started preparing for it?')
+				document.getElementById('ch').innerHTML = 'Start Preparing For Exam'
+			}
+		</script>
+	</body>
+</html>

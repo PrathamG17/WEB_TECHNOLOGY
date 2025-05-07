@@ -1,0 +1,29 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="items.css"?>
+<root>
+	<item>
+		<name>NoteBook</name>
+		<quantity>200 pg</quantity>
+		<price>60 Rs.</price>
+	</item>
+	<item>
+		<name>SketchBook</name>
+		<quantity>100 pg</quantity>
+		<price>40 Rs.</price>
+	</item>
+	<item>
+		<name>Pencil</name>
+		<quantity>30 itm</quantity>
+		<price>150 Rs.</price>
+	</item>
+	<item>
+		<name>Scale</name>
+		<quantity>20 itm</quantity>
+		<price>160 Rs.</price>
+	</item>
+	<item>
+		<name>Lead Box</name>
+		<quantity>20 pg</quantity>
+		<price>100 Rs.</price>
+	</item>
+</root>

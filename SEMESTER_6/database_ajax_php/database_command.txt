@@ -1,0 +1,81 @@
+┌──(root㉿kali)-[/]
+└─# service postgresql start
+                                                                                                                                                        
+┌──(root㉿kali)-[/]
+└─# su postgres             
+postgres@kali:/$ createdb e1
+postgres@kali:/$ psql e1
+psql (16.1 (Debian 16.1-1))
+Type "help" for help.
+
+e1=# create table event(eno int primary key, title varchar(30), d date)
+e1-# create table event(eno int primary key, title varchar(30), d date);
+ERROR:  syntax error at or near "create"
+LINE 2: create table event(eno int primary key, title varchar(30), d...
+        ^
+e1=# CREATE TABLE  event(eno int primary key, title varchar(30), d date);
+CREATE TABLE
+e1=# CREATE TABLE com(cno int primary key, name varchar(30), head varchar(30), ftime time, ttime time, status varchar(20));
+CREATE TABLE
+e1=# CREATE TABLE e_c(eno int references event(eno), cno int references com(cno));
+CREATE TABLE
+e1=# insert into event values (1, 'HR Meet', '12/2/2023');
+INSERT 0 1
+e1=# insert into event values (2, 'sports', '1/22/2022');
+INSERT 0 1
+e1=# insert into event values (3, 'expo', '6/19/2021');
+INSERT 0 1
+e1=# select * from event;
+ eno |  title  |     d      
+-----+---------+------------
+   1 | HR Meet | 2023-12-02
+   2 | sports  | 2022-01-22
+   3 | expo    | 2021-06-19
+(3 rows)
+
+e1=# insert into com values(101, 'food', 'Mr.sahil', '02:10:11', '09:00:00', 'completed');
+INSERT 0 1
+e1=# insert into com values(102, 'decoration', 'Miss.lila', '01:10:11', '10:00:00', 'completed');
+INSERT 0 1
+e1=# insert into com values(103, 'arrangement', 'Miss.riya', '01:10:11', '10:00:00', 'pending');
+INSERT 0 1
+e1=# select * from com;
+ cno |    name     |   head    |  ftime   |  ttime   |  status   
+-----+-------------+-----------+----------+----------+-----------
+ 101 | food        | Mr.sahil  | 02:10:11 | 09:00:00 | completed
+ 102 | decoration  | Miss.lila | 01:10:11 | 10:00:00 | completed
+ 103 | arrangement | Miss.riya | 01:10:11 | 10:00:00 | pending
+(3 rows)
+
+e1=# inser into com values(1, 101);
+ERROR:  syntax error at or near "inser"
+LINE 1: inser into com values(1, 101);
+        ^
+e1=# insert into com values(1, 101);
+INSERT 0 1
+e1=# insert into com values(1, 102);
+ERROR:  duplicate key value violates unique constraint "com_pkey"
+DETAIL:  Key (cno)=(1) already exists.
+e1=# insert into e_c values(1, 101);
+INSERT 0 1
+e1=# insert into e_c values(2, 101);
+INSERT 0 1
+e1=# insert into e_c values(2, 102);
+INSERT 0 1
+e1=# insert into e_c values(1, 102);
+INSERT 0 1
+e1=# insert into e_c values(3, 103);
+INSERT 0 1
+e1=# insert into e_c values(3, 101);
+INSERT 0 1
+e1=# select * from e_c;
+ eno | cno 
+-----+-----
+   1 | 101
+   2 | 101
+   2 | 102
+   1 | 102
+   3 | 103
+   3 | 101
+(6 rows)
+

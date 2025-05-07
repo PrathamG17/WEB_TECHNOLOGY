@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type = "text/javascript">
+			function show_user(str)
+			{
+				if(window.XMLHttpRequest)
+					xmlhttp = new XMLHttpRequest();
+				
+				xmlhttp.open("GET", "getteacher.php?q=" + str, true);
+				xmlhttp.send();
+
+				xmlhttp.onreadystatechange = function()
+				{
+					if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+					{
+						document.getElementById("textHint").innerHTML = xmlhttp.responseText;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<center>
+			<form>
+				<select name = "users" onchange = "show_user(this.value)">
+					<option value = "1">Poonam Ponde</option>
+					<option value = "2">Semma Jawale</option>
+					<option value = "3">Jayshri Patil</option>
+					<option value = "4">Kalpana Joshi</option>
+					<option value = "5">Ranjana Shevkar</option>
+				</select>
+			</form>
+			<br/><br/>
+			<div id = "textHint">
+				<b>PERSON INFORMATION WILL BE LISTED HERE</b>
+			</div>
+		</center>
+	</body>
+</html>

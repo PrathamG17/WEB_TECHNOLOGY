@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<h3>Chess Board Using Nested For Loop</h3>
+		
+		<table border = "1px" width = "270px" cellspacing = "0px" cellpadding = "0px">
+			<?php
+				ini_set('display_errors', 1);
+				ini_set('display_startup_errors', 1);
+				error_reporting(E_ALL);
+				
+				$row;
+				$col;
+				$total;
+				
+				for($row = 1; $row <= 8; $row++)
+				{
+					print("<tr>");
+					
+					for($col = 1; $col <= 8; $col++)
+					{
+						$total = $row + $col;
+						
+						if(0 == ($total % 2))
+						{
+							print("<td height = "30px" width = "30px" bgcolor = "white"></td>");
+						}
+						else
+						{
+							print("<td height = "30px" width = "30px" bgcolor = "Black"></td>");
+						}
+					}
+					
+					print("</tr>");
+				}
+			?>
+		</table>
+	</body>
+</html>
+
