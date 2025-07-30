@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CANVAS HANDS-ON</title>
+		<style>
+			canvas
+			{
+				background-color: #eff542;
+				border: 10px dashed #18191c;
+			}
+		</style>
+		<script>
+			window.onload = function()
+			{
+				var cObj = document.getElementById("draw");
+				var context = cObj.getContext("2d");
+				
+				//arc
+				var centerX = 250;
+				var centerY = 250;
+				var circleR = 200;
+				var startA = 0 * Math.PI;
+				var endA = 2 * Math.PI;
+				
+				context.lineWidth = 15;
+				context.strokeStyle = "#f5425a";
+				context.arc(centerX, centerY, circleR, startA, endA);
+				context.closePath();
+				
+				context.fillStyle = "#18191c";
+				context.fill();
+
+				context.stroke();				
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id="draw" width="500" height="500"></canvas>
+	</body>
+</html>

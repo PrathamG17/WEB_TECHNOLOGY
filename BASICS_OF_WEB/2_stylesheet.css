@@ -1,0 +1,137 @@
+body
+{
+	max-width : 880px;
+	margin : 8px;
+	border : thin black solid;
+}
+
+header
+{
+	background-color : red;/*#7695FE;*/
+	border : thin #336699 solid;
+	padding : 10px;
+	margin : 10px;
+	text-align : center;
+	border : thin black solid;
+}
+
+header h1
+{
+	margin : 0px;
+	color : white;
+	font-size : xx-large;
+}
+
+header .Teaser
+{
+	margin : 0px;
+	font-weight : bold;
+}
+
+header .Byline
+{
+	font-style : italic;
+	font-size : small;
+	margin : 0px;
+}
+
+.SiteHeader
+{
+	background-color : black;
+	border : thick black solid;
+	padding : 0px;
+}
+
+.Content
+{
+	font-size : medium;
+	font-family : Cambria, Cochin, Georgia, Times New Roman, Times, serif;
+	padding-top : 20px;
+	padding-bottom : 5px;
+	padding-left : 220px;
+	padding-right : 80px;
+	line-height : 120%;
+}
+
+.Content .LeadIn
+{
+	font-weight : bold;
+	font-size : large;
+	font-variant : small-caps;
+}
+
+.Content h2
+{
+	color : #24486C;
+	margin-bottom : 2px;
+	font-size : medium;
+}
+
+.Content p
+{
+	margin-top : 0px;
+}
+
+.Content figure
+{
+	float : left;
+	margin-left : 0px;
+	margin-top : 0px;
+	margin-right : 20px;
+	margin-bottom : 0px;
+}
+
+.Content figcaption
+{
+	font-size : small;
+	font-style : italic;
+	margin-bottom : 5px;
+}
+
+.PullQuote
+{
+	float : right;
+	max-width : 300px;
+	border-top : thin black solid;
+	border-bottom : thick black solid;
+	font-size : 30px;
+	line-height : 130%;
+	font-style : italic;
+	padding-top : 5px;
+	margin-left : 15px;
+	margin-bottom : 10px;
+}
+
+.PullQuote img
+{
+	vertical-align : bottom; 
+}
+
+.NavSidebar
+{
+	position : absolute;
+	top : 285px;
+	left : 17px;
+	padding : 10px, 15px, 0px, 15px;
+	width : 200px;
+	min-height : 700px;
+	background-color : #eee;
+	border : thin black solid;
+	font-size : small;
+}
+
+footer
+{
+	text-align : center;
+	font-size : xx-small;
+}
+
+footer .Desclaimer
+{
+	font-style : italic;
+}
+
+footer p
+{
+	margin : 3px;
+}

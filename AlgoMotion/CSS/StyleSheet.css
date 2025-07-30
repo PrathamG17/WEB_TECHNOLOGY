@@ -1,0 +1,11 @@
+#arrayContainer div {
+    width: 20px;
+    margin: 0 2px;
+    background-color: steelblue;
+    display: inline-block;
+}
+
+#arrayContainer div > div:first-child {
+    color: #333;
+    font-weight: bold;
+}

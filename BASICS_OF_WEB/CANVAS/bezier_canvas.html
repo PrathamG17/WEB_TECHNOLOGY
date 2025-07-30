@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CANVAS HANDS-ON</title>
+		<style>
+			canvas
+			{
+				background-color: #eff542;
+				border: 10px dashed #18191c;
+			}
+		</style>
+		<script>
+			window.onload = function()
+			{
+				var cObj = document.getElementById("draw");
+				var context = cObj.getContext("2d");
+				
+				//bezier curve
+				var control1X = 150;
+				var control1Y = 50;
+				var control2X = 275;
+				var control2Y = 450;
+				var startX = 50;
+				var startY = 250;
+				var endX = 375;
+				var endY = 250;
+				context.lineWidth = 15;
+				context.strokeStyle = "#f5425a";
+				context.moveTo(startX, startY);
+				context.bezierCurveTo(control1X, control1Y, control2X, control2Y, endX, endY);
+				context.closePath();
+				context.fillStyle = "#18191c";
+				context.fill();
+				context.stroke();				
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id="draw" width="500" height="500"></canvas>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CANVAS HANDS-ON</title>
+		<style>
+			canvas
+			{
+				background-color: #eff542;
+				border: 10px dashed #4542f5;
+			}
+		</style>
+		<script>
+			window.onload = function()
+			{
+				var cObj = document.getElementById("draw");
+				var context = cObj.getContext("2d");
+				
+				context.moveTo(10, 100);
+				context.lineTo(400, 100);
+				context.stroke();
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id="draw" width="500" height="500"></canvas>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CANVAS HANDS-ON</title>
+		<style>
+			canvas
+			{
+				background-color: #eff542;
+				border: 10px dashed #18191c;
+			}
+		</style>
+		<script>
+			window.onload = function()
+			{
+				var cObj = document.getElementById("draw");
+				var context = cObj.getContext("2d");
+				
+				//rectangle
+				context.fillStyle = "#18191c";
+				context.fillRect(10, 10, 100, 50);
+				context.fillRect(110, 70, 100, 50);
+				
+				context.fillRect(150, 150, 100, 75);
+
+				context.translate(50, 100);
+				context.fillRect(150, 150, 100, 75);
+
+				context.translate(50, 100);
+				context.fillRect(150, 150, 100, 75);
+
+				context.lineWidth = 15;
+				context.strokeStyle = "#f5425a";
+				
+				context.stroke();
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id="draw" width="500" height="500"></canvas>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AlgoMotion - Bubble Sort Simulator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/StyleSheet.css" />
+</head>
+<body class="bg-light">
+
+    <div class="container text-center py-5">
+        <h1 class="display-4 mb-4">🌀 Bubble Sort Simulation</h1>
+        <div class="mb-3">
+
+            <input type="text" id="userArrayInput" class="form-control" placeholder="Enter numbers like 5,3,8,1,2">
+            <button id="loadUserArray" class="btn btn-info mt-2">Load User Array</button>
+            
+            <button id="sortBtn" class="btn btn-primary">Start Sorting</button>
+            <button id="resetBtn" class="btn btn-secondary">Reset Array</button>
+        </div>
+        <div id="arrayContainer" class="d-flex justify-content-center align-items-end" style="height: 300px;">
+            <!-- Bars will be generated here -->
+        </div>
+    </div>
+
+    <!-- JS Libraries -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
